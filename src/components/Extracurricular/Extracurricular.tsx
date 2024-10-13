@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Container from '../Container'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import img1 from '../../assets/image/extracurricular1.png'
