@@ -3,9 +3,8 @@ import HeroImg from '../assets/image/hero-img.png'
 import Button from './Button'
 import Container from './Container'
 
-type Props = {}
 
-const Hero = (props: Props) => {
+const Hero = () => {
     const handleNavigateResume = () => {
 
     }

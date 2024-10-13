@@ -13,7 +13,6 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 
-type Props = {}
 
 const extracurricularOptions = [
     {
@@ -32,7 +31,7 @@ const extracurricularOptions = [
     },
 ]
 
-const Extracurricular = (props: Props) => {
+const Extracurricular = () => {
     const [selectOption, setSelectOption] = useState(1)
 
     return (

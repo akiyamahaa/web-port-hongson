@@ -2,7 +2,6 @@ import AboutImg from '../assets/image/aboutImg.png'
 import Container from './Container'
 import Dot from './Dot'
 
-type Props = {}
 
 const About = () => {
     return (

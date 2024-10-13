@@ -1,11 +1,9 @@
-import React from 'react'
 import Container from './Container'
 import Input from './Input'
 import { Send2 } from 'iconsax-react'
 
-type Props = {}
 
-const Contact = (props: Props) => {
+const Contact = () => {
     return (
         <Container>
             <div className='py-20 lg:py-36 flex md:flex-row gap-16 flex-col'>

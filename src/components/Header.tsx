@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import GithubLogo from '../assets/icon/github.png'
 import LinkedinLogo from '../assets/icon/linkedin.png'
 import Container from './Container'
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className='bg-white fixed top-0 left-0 right-0 shadow-sm z-10'>

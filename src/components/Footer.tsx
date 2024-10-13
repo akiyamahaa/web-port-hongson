@@ -1,10 +1,7 @@
-import React from 'react'
 import Container from './Container'
 import { ArrowUp } from 'iconsax-react'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
     return (
         <Container>
             <div className='flex flex-col md:flex-row items-center justify-between gap-8 pb-12 pt-6 border-t border-gray-400'>
