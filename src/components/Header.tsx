@@ -83,9 +83,30 @@ const Header = () => {
 
                 {/* Mobile Menu */}
                 <ul className="flex flex-col gap-4 items-center">
-                  <li className="text-lg text-gray-800">About</li>
-                  <li className="text-lg text-gray-800">Resume</li>
-                  <li className="text-lg text-gray-800">Contact</li>
+                  <button
+                    onClick={() => {
+                      handleScrollTo("about");
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    <li className="text-lg text-gray-800">About</li>
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleScrollTo("resume");
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    <li className="text-lg text-gray-800">Resume</li>
+                  </button>
+                  <button
+                    onClick={() => {
+                      handleScrollTo("contact");
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    <li className="text-lg text-gray-800">Contact</li>
+                  </button>
                 </ul>
 
                 {/* Social links in mobile modal */}
