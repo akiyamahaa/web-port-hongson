@@ -1,17 +1,17 @@
-import bentre20240 from "../../assets/image/bentre20240.jpg";
-import bentre20241 from "../../assets/image/bentre20241.jpg";
-import bentre20242 from "../../assets/image/bentre20242.jpg";
-import bentre20243 from "../../assets/image/bentre20243.jpg";
-import bentre20244 from "../../assets/image/bentre20244.jpg";
-import bentre20245 from "../../assets/image/bentre20245.jpg";
-import bentre20246 from "../../assets/image/bentre20246.jpg";
-import bentre20230 from "../../assets/image/bentre20230.jpg";
-import bentre20231 from "../../assets/image/bentre20231.jpg";
-import dance0 from "../../assets/image/dance0.jpg";
-import dance1 from "../../assets/image/dance1.jpg";
-import dance2 from "../../assets/image/dance2.jpg";
-import dance3 from "../../assets/image/dance3.jpg";
-import dance4 from "../../assets/image/dance4.jpg";
+import bentre20240 from "../../assets/image/bentre20240.png";
+import bentre20241 from "../../assets/image/bentre20241.png";
+import bentre20242 from "../../assets/image/bentre20242.png";
+import bentre20243 from "../../assets/image/bentre20243.png";
+import bentre20244 from "../../assets/image/bentre20244.png";
+import bentre20245 from "../../assets/image/bentre20245.png";
+import bentre20246 from "../../assets/image/bentre20246.png";
+import bentre20230 from "../../assets/image/bentre20230.png";
+import bentre20231 from "../../assets/image/bentre20231.png";
+import dance0 from "../../assets/image/dance0.png";
+import dance1 from "../../assets/image/dance1.png";
+import dance2 from "../../assets/image/dance2.png";
+import dance3 from "../../assets/image/dance3.png";
+import dance4 from "../../assets/image/dance4.png";
 
 export const extracurricularOptions = [
   {
