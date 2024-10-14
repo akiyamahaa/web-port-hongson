@@ -87,10 +87,13 @@ const Header = () => {
 
                 {/* Social links in mobile modal */}
                 <div className="flex flex-row gap-3 justify-center mt-4">
-                  <a href="">
+                  <a href="https://github.com/tuanson007" target="_blank">
                     <img src={GithubLogo} alt="GitHub" />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://www.linkedin.com/in/đào-tuấn-sơn-713b4632b/"
+                    target="_blank"
+                  >
                     <img src={LinkedinLogo} alt="LinkedIn" />
                   </a>
                 </div>
