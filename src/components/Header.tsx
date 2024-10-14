@@ -61,7 +61,10 @@ const Header = () => {
             <a href="https://github.com/tuanson007" target="_blank">
               <img src={GithubLogo} alt="GitHub" />
             </a>
-            <a href="https://www.google.com/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/đào-tuấn-sơn-713b4632b/"
+              target="_blank"
+            >
               <img src={LinkedinLogo} alt="LinkedIn" />
             </a>
           </div>
@@ -90,7 +93,10 @@ const Header = () => {
                   <a href="https://github.com/tuanson007" target="_blank">
                     <img src={GithubLogo} alt="GitHub" />
                   </a>
-                  <a href="https://www.google.com/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/đào-tuấn-sơn-713b4632b/"
+                    target="_blank"
+                  >
                     <img src={LinkedinLogo} alt="LinkedIn" />
                   </a>
                 </div>
