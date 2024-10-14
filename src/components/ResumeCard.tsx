@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Button from "./Button";
 import Dot from "./Dot";
 
@@ -13,29 +14,67 @@ type Props = {
 
 const ResumeCard = ({ data }: Props) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-16">
+    <motion.div
+      className="flex flex-col lg:flex-row gap-16"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="space-y-4">
-        <h1 className="font-semibold text-3xl text-gray-800">{data.title}</h1>
+        <motion.h1
+          className="font-semibold text-3xl text-gray-800"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {data.title}
+        </motion.h1>
         <div className="space-y-1">
-          <p className="text-xl font-semibold text-primary-500">
+          <motion.p
+            className="text-xl font-semibold text-primary-500"
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             {data.subTitle}
-          </p>
-          <p className="text-xl text-gray-800">{data.timeline}</p>
+          </motion.p>
+          <motion.p
+            className="text-xl text-gray-800"
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {data.timeline}
+          </motion.p>
         </div>
-        <p className="text-xl text-gray-500">{data.description}</p>
+        <motion.p
+          className="text-xl text-gray-500"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {data.description}
+        </motion.p>
         <Button title="View more" onClick={() => {}} />
       </div>
+
       <div className="space-y-1">
         {data.content.map((item) => (
-          <div className="flex flex-row items-start gap-2" key={item}>
+          <motion.div
+            className="flex flex-row items-start gap-2"
+            key={item}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
             <div className="mt-3">
               <Dot />
             </div>
             <p className="text-gray-800 text-xl">{item}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

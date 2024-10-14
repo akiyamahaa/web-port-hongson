@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Container from "./Container";
 import ResumeCard from "./ResumeCard";
+import { motion } from "framer-motion";
 
 const resumeOptions = [
   {
@@ -127,44 +128,89 @@ const content: any = {
 
 const Resume = () => {
   const [selectOption, setSelectOption] = useState(1);
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
   return (
     <div className="bg-primary-50 py-20 lg:py-36" id="resume">
       <Container>
-        <div className="space-y-12">
-          <h1 className="text-5xl text-primary-500 font-semibold text-center">
+        <motion.div
+          className="space-y-12"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
+          <motion.h1
+            className="text-5xl text-primary-500 font-semibold text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             Resume
-          </h1>
-          <div className="space-y-16">
+          </motion.h1>
+
+          <motion.div
+            className="space-y-16"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          >
             {/* List Button */}
-            <div className="flex flex-row flex-wrap gap-4 justify-center">
+            <motion.div className="flex flex-row flex-wrap gap-4 justify-center">
               {resumeOptions.map((option) => (
-                <div
+                <motion.div
                   key={option.id}
-                  className={`cursor-pointer px-6 py-2 rounded-xl text-lg font-semibold transition-colors duration-300
-                                ${
-                                  selectOption === option.id
-                                    ? "bg-primary-500 text-white"
-                                    : "bg-primary-100 text-gray-800"
-                                }`}
+                  className={`cursor-pointer px-6 py-2 rounded-xl text-lg font-semibold transition-colors duration-300 ${
+                    selectOption === option.id
+                      ? "bg-primary-500 text-white"
+                      : "bg-primary-100 text-gray-800"
+                  }`}
+                  whileHover={{ scale: 1.05 }}
                   onClick={() => setSelectOption(option.id)} // Set selected option on click
                 >
-                  <span className="font-semibold text-base">
+                  <motion.span
+                    className="font-semibold text-base"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {option.title}
-                  </span>
-                </div>
+                  </motion.span>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
+
             {/* Detail */}
-            {content[selectOption].map((item: any, index: number) => (
-              <div key={item.title}>
-                <ResumeCard data={item} />
-                {index < content[selectOption].length - 1 && (
-                  <div className="bg-primary-200 w-full h-[1px] my-12" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+            <motion.div
+              className="space-y-12"
+              initial="hidden"
+              animate="visible"
+              key={selectOption}
+              variants={fadeInUp}
+            >
+              {content[selectOption].map((item: any, index: number) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                  <ResumeCard data={item} />
+                  {index < content[selectOption].length - 1 && (
+                    <motion.div
+                      className="bg-primary-200 w-full h-[1px] my-12"
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 0.8 }}
+                    />
+                  )}
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </Container>
     </div>
   );
