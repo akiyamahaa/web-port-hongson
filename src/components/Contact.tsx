@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Container from "./Container";
 import Input from "./Input";
 import { Send2 } from "iconsax-react";
+import GithubLogo from "../assets/icon/github.png";
+import LinkedinLogo from "../assets/icon/linkedin.png";
 
 // Animation variants
 const fadeInUp = {
@@ -53,6 +55,17 @@ const Contact = () => {
             >
               sondt07@gmail.com
             </motion.p>
+          </div>
+          <div className="hidden sm:flex flex-row gap-3">
+            <a href="https://github.com/tuanson007" target="_blank">
+              <img src={GithubLogo} alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/đào-tuấn-sơn-713b4632b/"
+              target="_blank"
+            >
+              <img src={LinkedinLogo} alt="LinkedIn" />
+            </a>
           </div>
         </motion.div>
 
