@@ -91,16 +91,22 @@ const About = () => {
             <h2 className="text-2xl text-gray-800 font-semibold">GPA:</h2>
             <div className="flex flex-row items-center justify-between">
               <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">8.8</p>
-                <p className="text-xl text-primary-500">Grade 9</p>
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  8.8
+                </p>
+                <p className="text-sm md:text-xl text-primary-500">Grade 9</p>
               </motion.div>
               <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">8.9</p>
-                <p className="text-xl text-primary-500">Grade 10</p>
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  8.9
+                </p>
+                <p className="text-sm md:text-xl text-primary-500">Grade 10</p>
               </motion.div>
               <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">9.5</p>
-                <p className="text-xl text-primary-500">Grade 11</p>
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  9.5
+                </p>
+                <p className="text-sm md:text-xl text-primary-500">Grade 11</p>
               </motion.div>
             </div>
           </motion.div>
@@ -109,18 +115,22 @@ const About = () => {
             <h2 className="text-2xl text-gray-800 font-semibold">Scores:</h2>
             <div className="flex flex-row items-center justify-between">
               <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">1500</p>
-                <p className="text-xl text-primary-500">SAT (superscore)</p>
-              </motion.div>
-              <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">7.0</p>
-                <p className="text-xl text-primary-500">IELTS</p>
-              </motion.div>
-              <motion.div className="space-y-2" variants={fadeInUp}>
-                <p className="font-semibold text-5xl text-gray-800">5</p>
-                <p className="text-xl text-primary-500">
-                  AP Computer Science A
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  1500
                 </p>
+                <p className="text-sm md:text-xl text-primary-500">SAT</p>
+              </motion.div>
+              <motion.div className="space-y-2" variants={fadeInUp}>
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  7.0
+                </p>
+                <p className="text-sm md:text-xl text-primary-500">IELTS</p>
+              </motion.div>
+              <motion.div className="space-y-2" variants={fadeInUp}>
+                <p className="font-semibold text-4xl md:text-5xl text-gray-800">
+                  5
+                </p>
+                <p className="text-sm md:text-xl text-primary-500">AP CS A</p>
               </motion.div>
             </div>
           </motion.div>

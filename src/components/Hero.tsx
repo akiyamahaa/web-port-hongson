@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { ArrowDown2 } from "iconsax-react";
+import { ArrowDown2, ArrowRight } from "iconsax-react";
 import HeroImg from "../assets/image/hero-img.png";
 import Button from "./Button";
 import Container from "./Container";
@@ -7,8 +7,14 @@ import { useRef } from "react";
 
 const Hero = () => {
   const ref = useRef(null);
-  const handleNavigateResume = () => {
-    const element = document.getElementById("resume");
+  const handleNavigateProject = () => {
+    const element = document.getElementById("personalproject");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const handleNavigateActivities = () => {
+    const element = document.getElementById("activities");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -63,7 +69,7 @@ const Hero = () => {
                     className="text-4xl md:text-7xl font-semibold text-gray-800"
                     variants={itemVariant}
                   >
-                    Hi, I'm{" "}
+                    Hello there, I am
                   </motion.h1>
                   <motion.h1
                     className="text-4xl md:text-7xl font-semibold text-primary-500"
@@ -73,20 +79,52 @@ const Hero = () => {
                   </motion.h1>
                 </div>
                 <motion.p
+                  className="text-xl text-gray-800 font-semibold text-center lg:text-start mb-8"
+                  variants={itemVariant}
+                >
+                  A highschool-level coding specialist with a passion for
+                  improving people's health.
+                </motion.p>
+                <motion.p
+                  className="text-xl text-gray-500 text-center lg:text-start mb-8"
+                  variants={itemVariant}
+                >
+                  Growing up with my grandmother as my main caretaker, I have
+                  much experience in taking care of elders. It is hard to look
+                  at the one you love slowly growing old, so I want to cherish
+                  every memory while I still have a chance. Those are the two
+                  main reasons for me to create “Nhật ký sức khỏe” - “Health
+                  Diary” to make sure the elders will get the best help and the
+                  boost of health to make the memories last.
+                </motion.p>
+                <motion.p
                   className="text-xl text-gray-500 text-center lg:text-start"
                   variants={itemVariant}
                 >
-                  A passionate student dedicated to STEM, leadership, and
-                  creating impactful solutions through technology. With a deep
-                  interest in computer science, mathematics, and
-                  problem-solving, I aim to use my skills to make a positive
-                  impact in the world.
+                  For the best experience, I hope young people will find this
+                  app useful and teach older adults how to use it. Even if there
+                  are no supporters to assist the seniors, no worries because
+                  I've written a technology-friendly guide titled “Slow Steps
+                  into the Digital Era”, designed to help the elderly
+                  confidently navigate and enjoy the digital world
+                  independently.{" "}
                 </motion.p>
                 <motion.div
-                  className="flex flex-row justify-center lg:justify-start"
+                  className="flex flex-row justify-center lg:justify-start gap-4"
                   variants={itemVariant}
                 >
-                  <Button title="View Resume" onClick={handleNavigateResume} />
+                  <Button
+                    title="My Personal Project"
+                    onClick={handleNavigateProject}
+                    variant="bold"
+                    Icon={<ArrowRight size={24} color="#fff" />}
+                  />
+                  <Button
+                    title="My Activities"
+                    onClick={handleNavigateActivities}
+                    variant="outline"
+                    Icon={<ArrowRight size={24} color="#53CB17" />}
+                  />
                 </motion.div>
               </div>
             </motion.div>

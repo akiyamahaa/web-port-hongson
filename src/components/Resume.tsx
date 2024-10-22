@@ -7,55 +7,24 @@ import { motion } from "framer-motion";
 const resumeOptions = [
   {
     id: 1,
-    title: "PERSONAL PROJECT",
-  },
-  {
-    id: 2,
     title: "LEADERSHIP",
   },
   {
-    id: 3,
+    id: 2,
     title: "INTERNSHIP",
   },
   {
-    id: 4,
+    id: 3,
     title: "RESEARCH",
   },
   {
-    id: 5,
+    id: 4,
     title: "OTHER ACTIVITIES",
   },
 ];
 
 const content: any = {
   1: [
-    {
-      title: "“Health Diary” Mobile Application",
-      subTitle: "Founder and Lead-programmer",
-      timeline: "09/2023 - 02/2024",
-      description:
-        "An app created with specialized features for users to be informed about potential diseases and be reminded to take medicine",
-      content: [
-        "Led a team of 5 young developers in the app development process.",
-        "Developed multiple functions such as a health diary, meeting organizer, drug-taking alarm, encyclopedia about diseases common to the elderly.",
-        "Introduced and applied the app usage in multiple local Nursing Homes, helping over 50 elderly in the daily life",
-      ],
-    },
-    {
-      title: "Book Project “Slow steps into the Digital Era”",
-      subTitle: "Author",
-      timeline: "04/2024 - 09/2024",
-      description:
-        "A book provided the basics and advances of digital devices for people that have difficulties using them",
-      content: [
-        "Wrote and published a 98-page book about teaching the elderly to get familiar with digital devices",
-        "Printed and gifted over 150 copies to Nursing Homes around Ho Chi Minh city.",
-        "Books are displayed and sold in local bookstores and newstands.",
-        "Developed patience through anticipating common points of confusion and addressing them",
-      ],
-    },
-  ],
-  2: [
     {
       title: "STEM Junior",
       subTitle: "President",
@@ -72,7 +41,7 @@ const content: any = {
       ],
     },
   ],
-  3: [
+  2: [
     {
       title:
         "School of Computer Science and Engineering of Vietnam International – National University HCMC",
@@ -96,7 +65,7 @@ const content: any = {
       ],
     },
   ],
-  4: [
+  3: [
     {
       title:
         "Harnessing the Power of Health Diaries: A Pathway to Improved Healthcare Engagement in Older Populations",
@@ -111,7 +80,7 @@ const content: any = {
       ],
     },
   ],
-  5: [
+  4: [
     {
       title: "Plasbit",
       subTitle: "HR Member",
@@ -134,7 +103,7 @@ const Resume = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
   return (
-    <div className="bg-primary-50 py-20 lg:py-36" id="resume">
+    <div className="bg-primary-50 py-20 lg:py-36" id="activities">
       <Container>
         <motion.div
           className="space-y-12"
@@ -148,7 +117,7 @@ const Resume = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Resume
+            My Activities
           </motion.h1>
 
           <motion.div

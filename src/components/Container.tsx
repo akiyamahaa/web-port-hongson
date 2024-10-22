@@ -1,13 +1,15 @@
-import { ReactNode } from 'react'
+import { ReactNode } from "react";
 
 type Props = {
-    children: ReactNode
-}
+  children: ReactNode;
+};
 
 const Container = ({ children }: Props) => {
-    return (
-        <div className='container mx-auto px-8 max-w-screen-lg'>{children}</div>
-    )
-}
+  return (
+    <div className="container mx-auto px-8 max-w-screen-xl overflow-hidden">
+      {children}
+    </div>
+  );
+};
 
-export default Container
+export default Container;
