@@ -1,15 +1,15 @@
 import React from "react";
-import helpfulapp1 from "../../assets/image/helpful-app-1.jpg";
-import helpfulapp2 from "../../assets/image/helpful-app-2.jpg";
-import helpfulapp3 from "../../assets/image/helpful-app-3.jpg";
-import helpfulapp4 from "../../assets/image/helpful-app-4.jpg";
-import helpfulapp5 from "../../assets/image/helpful-app-5.jpg";
-import helpfulapp6 from "../../assets/image/helpful-app-6.jpg";
-import helpfulapp7 from "../../assets/image/helpful-app-7.jpg";
-import helpfulapp8 from "../../assets/image/helpful-app-8.jpg";
-import helpfulapp9 from "../../assets/image/helpful-app-9.jpg";
-import helpfulapp10 from "../../assets/image/helpful-app-10.jpg";
-import helpfulapp11 from "../../assets/image/helpful-app-11.jpg";
+import helpfulapp1 from "../../assets/image/helpfulapp0.jpg";
+import helpfulapp2 from "../../assets/image/helpfulapp1.jpg";
+import helpfulapp3 from "../../assets/image/helpfulapp2.jpg";
+import helpfulapp4 from "../../assets/image/helpfulapp3.jpg";
+import helpfulapp5 from "../../assets/image/helpfulapp4.jpg";
+import helpfulapp6 from "../../assets/image/helpfulapp5.jpg";
+import helpfulapp7 from "../../assets/image/helpfulapp6.jpg";
+import helpfulapp8 from "../../assets/image/helpfulapp7.jpg";
+import helpfulapp9 from "../../assets/image/helpfulapp8.jpg";
+import helpfulapp10 from "../../assets/image/helpfulapp9.jpg";
+import helpfulapp11 from "../../assets/image/helpfulapp10.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

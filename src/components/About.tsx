@@ -14,12 +14,12 @@ const containerVariant = {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const fadeInLeft = {
   hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
 const About = () => {
@@ -43,7 +43,7 @@ const About = () => {
             className="w-full rounded-3xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 0.5 }}
           />
         </motion.div>
 

@@ -30,7 +30,8 @@ const Slider = ({ myOption }: Props) => {
           <SwiperSlide key={image}>
             <motion.img
               src={image}
-              alt=""
+              alt="image-slider"
+              className="rounded-3xl w-full"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
