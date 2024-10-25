@@ -82,7 +82,7 @@ const content: any = {
   ],
   4: [
     {
-      title: "Plasbit",
+      title: "The Plasbit Campaign",
       subTitle: "HR Member",
       timeline: "08/2023 - 07/2024",
       description: "A campaign focused on improving lives through recycling.",

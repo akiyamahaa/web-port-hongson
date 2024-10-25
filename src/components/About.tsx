@@ -26,7 +26,7 @@ const About = () => {
   return (
     <Container>
       <motion.div
-        className="py-20 lg:py-36 flex flex-row items-start gap-16"
+        className="pt-20 lg:pt-36 pb-12 flex flex-row items-start gap-16"
         id="about"
         initial="hidden"
         whileInView="visible"
@@ -40,7 +40,7 @@ const About = () => {
           <motion.img
             src={AboutImg}
             alt="About me"
-            className="w-full"
+            className="w-full rounded-3xl"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5 }}

@@ -21,7 +21,7 @@ const ResumeCard = ({ data }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="space-y-4">
+      <div className="space-y-4 flex-1">
         <motion.h1
           className="font-semibold text-3xl text-gray-800"
           initial={{ opacity: 0 }}
@@ -64,7 +64,7 @@ const ResumeCard = ({ data }: Props) => {
         />
       </div>
 
-      <div className="space-y-1">
+      <div className="space-y-1 flex-1">
         {data.content.map((item) => (
           <motion.div
             className="flex flex-row items-start gap-2"

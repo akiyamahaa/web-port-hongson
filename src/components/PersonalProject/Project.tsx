@@ -9,6 +9,7 @@ import ImageGallery from "./ImageGallery";
 const data = {
   title: "“Health Diary” Mobile Application",
   subTitle: "Founder and Lead-programmer",
+  caption: `This is the project's first milestone that I have been cherishing since 2023. I'm excited to share this first working demo with my grandma, who is my biggest inspiration, and from then gain the confidence to upload the application on Google Play and App Store.`,
   timeline: "09/2023 - 02/2024",
   description:
     "An app created with specialized features for users to be informed about potential diseases and be reminded to take medicine",
@@ -16,6 +17,7 @@ const data = {
     "Led a team of 5 young developers in the app development process.",
     "Developed multiple functions such as a health diary, meeting organizer, drug-taking alarm, encyclopedia about diseases common to the elderly.",
     "Introduced and applied the app usage in multiple local Nursing Homes, helping over 50 elderly in the daily life",
+    "Published the app on Appstore and Google Play, attracting 300+ downloads and got a 4.5-star rating.",
   ],
 };
 
@@ -38,6 +40,9 @@ const Project = () => {
                 >
                   {data.title}
                 </motion.h1>
+                <p className="text-base md:text-xl text-gray-500 my-4">
+                  {data.caption}
+                </p>
                 <div className="space-y-1">
                   <motion.p
                     className="text-base md:text-xl font-semibold text-primary-500"
@@ -57,19 +62,26 @@ const Project = () => {
                   </motion.p>
                 </div>
                 <motion.p
-                  className="text-base md:text-xl text-gray-500"
+                  className="text-base md:text-xl text-gray-500 mb-2"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6 }}
                 >
                   {data.description}
                 </motion.p>
-                <Button
-                  title="Download Apk"
-                  onClick={() => {}}
-                  variant="outline"
-                  Icon={<DocumentDownload size={24} color="#53CB17" />}
-                />
+                <div>
+                  <a
+                    href="https://drive.google.com/file/d/1DULzAHvSlu1f5to-12W_HN2UdHQsTIyh/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <Button
+                      title="Download Apk"
+                      onClick={() => {}}
+                      variant="outline"
+                      Icon={<DocumentDownload size={24} color="#53CB17" />}
+                    />
+                  </a>
+                </div>
               </div>
               <div className="space-y-1">
                 {data.content.map((item) => (
@@ -83,7 +95,7 @@ const Project = () => {
                     <div className="mt-3">
                       <Dot />
                     </div>
-                    <p className="text-gray-800 text-xl">{item}</p>
+                    <p className="text-gray-800 text-base">{item}</p>
                   </motion.div>
                 ))}
               </div>
@@ -97,8 +109,9 @@ const Project = () => {
             How to use “Health Diary” Application
           </h2>
           <p className="text-base md:text-xl text-gray-500 text-center">
-            Lorem ipsum dolor sit amet consectetur. Enim dignissim felis egestas
-            feugiat. Vel volutpat blandit pharetra fermentum odio ac tortor a.
+            This short video is designed specifically for people with vision
+            problems such as aging or eye strain, this video will be an
+            effective assistant, helping them understand the content easily.”
           </p>
         </div>
         <div className="mt-12">
@@ -112,7 +125,7 @@ const Project = () => {
         </div>
       </Container>
       <Container>
-        <div className="mt-32 pb-48 space-y-12">
+        <div className="mt-32 space-y-12">
           <h2 className="text-3xl font-semibold text-center text-gray-800">
             “Son’s Helpful App” Project
           </h2>

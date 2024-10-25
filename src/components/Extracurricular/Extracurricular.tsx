@@ -1,12 +1,9 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../Container";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./slide.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
-import { extracurricularOptions } from "./data";
+import { EType, extracurricularOptions } from "./data";
+import Slider from "./Slider";
+import Content from "./Content";
 
 const Extracurricular = () => {
   const [selectOption, setSelectOption] = useState(1);
@@ -17,14 +14,15 @@ const Extracurricular = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const slideIn = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-  };
+  const myOption = useMemo(
+    () => extracurricularOptions.find((item) => item.id === selectOption),
+    [selectOption]
+  );
 
   return (
     <Container>
       <motion.div
+        id="activities"
         className="py-20 lg:py-36 space-y-12"
         initial="hidden"
         whileInView="visible"
@@ -37,7 +35,7 @@ const Extracurricular = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Extracurricular
+          Extra-Curricular Activity
         </motion.h1>
 
         {/* List Button */}
@@ -64,28 +62,17 @@ const Extracurricular = () => {
           ))}
         </motion.div>
 
-        {/* Swiper for images */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={slideIn} // Slide in effect for the Swiper
-        >
-          <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-            {extracurricularOptions
-              .find((item) => item.id === selectOption)
-              ?.images.map((image) => (
-                <SwiperSlide key={image}>
-                  <motion.img
-                    src={image}
-                    alt=""
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                  />
-                </SwiperSlide>
-              ))}
-          </Swiper>
-        </motion.div>
+        {myOption && myOption.type === EType.RESUME ? (
+          // Type Content
+          <>
+            <Content myOption={myOption} />
+          </>
+        ) : (
+          // Swiper
+          <>
+            <Slider myOption={myOption} />
+          </>
+        )}
       </motion.div>
     </Container>
   );

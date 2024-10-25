@@ -3,6 +3,25 @@ import GithubLogo from "../assets/icon/github.png";
 import LinkedinLogo from "../assets/icon/linkedin.png";
 import Container from "./Container";
 
+const navOptions = [
+  {
+    title: "About",
+    href: "about",
+  },
+  {
+    title: "Personal Project",
+    href: "project",
+  },
+  {
+    title: "Activities",
+    href: "activities",
+  },
+  {
+    title: "Contact",
+    href: "contact",
+  },
+];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -45,15 +64,11 @@ const Header = () => {
 
           {/* Desktop Menu (hidden in mobile) */}
           <ul className="hidden sm:flex flex-row gap-10">
-            <button onClick={() => handleScrollTo("about")}>
-              <li className="text-lg text-gray-800">About</li>
-            </button>
-            <button onClick={() => handleScrollTo("resume")}>
-              <li className="text-lg text-gray-800">Resume</li>
-            </button>
-            <button onClick={() => handleScrollTo("contact")}>
-              <li className="text-lg text-gray-800">Contact</li>
-            </button>
+            {navOptions.map((nav) => (
+              <button onClick={() => handleScrollTo(nav.href)} key={nav.title}>
+                <li className="text-lg text-gray-800">{nav.title}</li>
+              </button>
+            ))}
           </ul>
 
           {/* Social links (hidden in mobile) */}
@@ -83,30 +98,17 @@ const Header = () => {
 
                 {/* Mobile Menu */}
                 <ul className="flex flex-col gap-4 items-center">
-                  <button
-                    onClick={() => {
-                      handleScrollTo("about");
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <li className="text-lg text-gray-800">About</li>
-                  </button>
-                  <button
-                    onClick={() => {
-                      handleScrollTo("resume");
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <li className="text-lg text-gray-800">Resume</li>
-                  </button>
-                  <button
-                    onClick={() => {
-                      handleScrollTo("contact");
-                      setIsMenuOpen(false);
-                    }}
-                  >
-                    <li className="text-lg text-gray-800">Contact</li>
-                  </button>
+                  {navOptions.map((nav) => (
+                    <button
+                      onClick={() => {
+                        handleScrollTo(nav.href);
+                        // setIsMenuOpen(false);
+                      }}
+                      key={nav.title}
+                    >
+                      <li className="text-lg text-gray-800">{nav.title}</li>
+                    </button>
+                  ))}
                 </ul>
 
                 {/* Social links in mobile modal */}

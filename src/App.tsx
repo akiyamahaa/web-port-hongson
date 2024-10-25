@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Honor from "./components/Honor";
 import PersonalProject from "./components/PersonalProject";
-import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
       <Hero />
       <About />
       <PersonalProject />
-      <Resume />
+      {/* <Resume /> */}
       <Honor />
       <Extracurricular />
       <Contact />

@@ -75,7 +75,7 @@ const Honor = () => {
           Honors and Awards
         </motion.h1>
         <motion.div
-          className="grid md:grid-cols-2 grid-cols-1 gap-6"
+          className="grid md:grid-cols-2 grid-cols-1 gap-6 pb-16"
           variants={containerVariant}
         >
           {listHonor.map((item) => (

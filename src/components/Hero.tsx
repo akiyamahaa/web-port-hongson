@@ -8,7 +8,7 @@ import { useRef } from "react";
 const Hero = () => {
   const ref = useRef(null);
   const handleNavigateProject = () => {
-    const element = document.getElementById("personalproject");
+    const element = document.getElementById("project");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -21,7 +21,7 @@ const Hero = () => {
   };
 
   const handleScroll = () => {
-    const honorElement = document.getElementById("honor");
+    const honorElement = document.getElementById("about");
     if (honorElement) {
       honorElement.scrollIntoView({
         behavior: "smooth", // Smooth scroll animation
