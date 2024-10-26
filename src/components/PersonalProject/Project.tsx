@@ -8,7 +8,7 @@ import ImageGallery from "./ImageGallery";
 
 const data = {
   title: "“Health Diary” Mobile Application",
-  subTitle: "Founder and Lead-programmer",
+  subTitle: "Founder and Lead-programmer: Dao Tuan Son",
   caption: `This is the project's first milestone that I have been cherishing since 2023. I'm excited to share this first working demo with my grandma, who is my biggest inspiration, and from then gain the confidence to upload the application on Google Play and App Store.`,
   timeline: "09/2023 - 02/2024",
   description:
@@ -111,7 +111,7 @@ const Project = () => {
           <p className="text-base md:text-xl text-gray-500 text-center">
             This short video is designed specifically for people with vision
             problems such as aging or eye strain, this video will be an
-            effective assistant, helping them understand the content easily.”
+            effective assistant, helping them understand the content easily.
           </p>
         </div>
         <div className="mt-12">

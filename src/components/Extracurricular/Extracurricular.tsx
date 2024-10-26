@@ -48,7 +48,7 @@ const Extracurricular = () => {
           {extracurricularOptions.map((option) => (
             <motion.div
               key={option.id}
-              className={`cursor-pointer px-6 py-2 rounded-xl text-lg font-semibold transition-colors duration-300
+              className={`cursor-pointer px-6 py-2 rounded-xl text-lg font-semibold transition-colors duration-300 uppercase
                 ${
                   selectOption === option.id
                     ? "bg-primary-500 text-white"
