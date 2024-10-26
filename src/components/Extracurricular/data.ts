@@ -126,6 +126,7 @@ export const extracurricularOptions = [
     title: "BEN TRE 2023",
     images: [bentre20230, bentre20231],
     type: EType.SWIPER,
+    description: `One of the selected students to come to SOS Children's Villages Ben Tre to encourage childrens’ reading ability and host Tet holiday theme program for the misfortune children`,
   },
   {
     id: 6,
@@ -147,6 +148,7 @@ export const extracurricularOptions = [
     title: "DANCE PERFORMANCE",
     images: [dance0, dance1, dance2, dance3, dance4],
     type: EType.SWIPER,
+    description: `Join in a historical musical performance about the pain and the glory of the Southern-Vietnamese people in the fight to achieve freedom`,
   },
   {
     id: 8,

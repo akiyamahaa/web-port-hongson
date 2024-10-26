@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import Button from "./Button";
 import Dot from "./Dot";
-import { ArrowRight } from "iconsax-react";
 
 type Props = {
   data: {
@@ -56,14 +54,7 @@ const ResumeCard = ({ data }: Props) => {
         >
           {data.description}
         </motion.p>
-        <Button
-          title="View more"
-          onClick={() => {}}
-          variant="outline"
-          Icon={<ArrowRight size={24} color="#53CB17" />}
-        />
       </div>
-
       <div className="space-y-1 flex-1">
         {data.content.map((item) => (
           <motion.div

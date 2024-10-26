@@ -13,7 +13,7 @@ const navOptions = [
     href: "project",
   },
   {
-    title: "Activities",
+    title: "Extra-Curricular Activity",
     href: "activities",
   },
   {
@@ -42,7 +42,7 @@ const Header = () => {
 
           {/* Hamburger Menu Button */}
           <button
-            className="flex flex-col gap-1 sm:hidden"
+            className="flex flex-col gap-1 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <span
@@ -63,7 +63,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Menu (hidden in mobile) */}
-          <ul className="hidden sm:flex flex-row gap-10">
+          <ul className="hidden lg:flex flex-row gap-10">
             {navOptions.map((nav) => (
               <button onClick={() => handleScrollTo(nav.href)} key={nav.title}>
                 <li className="text-lg text-gray-800">{nav.title}</li>
@@ -72,7 +72,7 @@ const Header = () => {
           </ul>
 
           {/* Social links (hidden in mobile) */}
-          <div className="hidden sm:flex flex-row gap-3">
+          <div className="hidden lg:flex flex-row gap-3">
             <a href="https://github.com/tuanson007" target="_blank">
               <img src={GithubLogo} alt="GitHub" />
             </a>
@@ -102,7 +102,7 @@ const Header = () => {
                     <button
                       onClick={() => {
                         handleScrollTo(nav.href);
-                        // setIsMenuOpen(false);
+                        setIsMenuOpen(false);
                       }}
                       key={nav.title}
                     >

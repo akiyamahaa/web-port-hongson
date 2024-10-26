@@ -83,7 +83,7 @@ const Project = () => {
                   </a>
                 </div>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 {data.content.map((item) => (
                   <motion.div
                     className="flex flex-row items-start gap-2"
@@ -117,7 +117,7 @@ const Project = () => {
         <div className="mt-12">
           <video className="w-full rounded-3xl" controls>
             <source
-              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+              src="https://firebasestorage.googleapis.com/v0/b/practice-firebase-projec-e3f5a.appspot.com/o/APP%20INTRODUCTION%20CLIP.mp4?alt=media&token=ffabd7a4-fe4c-4834-b3ba-9757303205fe"
               type="video/mp4"
             />
             Your browser does not support HTML video.
@@ -126,9 +126,22 @@ const Project = () => {
       </Container>
       <Container>
         <div className="mt-32 space-y-12">
-          <h2 className="text-3xl font-semibold text-center text-gray-800">
-            “Son’s Helpful App” Project
-          </h2>
+          <div className="space-y-3 text-center">
+            <h2 className="text-3xl font-semibold text-center text-gray-800">
+              “Son’s Helpful App” Project
+            </h2>
+            <p className="text-base md:text-xl text-gray-500">2024</p>
+            <p className="text-base md:text-xl text-gray-500">
+              Thanks to the community's enthusiastic support, which resulted in
+              over 300 downloads and a 4.5-star rating, I organized the final
+              step of the project at the Dieu Phap Senior Ladies Shelter. On
+              October 20th, 2024, in celebration of Vietnamese Women’s Day, I
+              delivered gifts to the residents and engaged with them to directly
+              give instructions and gather feedback on their experience using
+              the application. This interaction aimed to enhance the app further
+              and ensure it meets their needs effectively.
+            </p>
+          </div>
           <ImageGallery />
         </div>
       </Container>
